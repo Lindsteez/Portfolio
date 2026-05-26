@@ -1,0 +1,115 @@
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contactContainer h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.infoBox {
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.infoBox:nth-child(2) {
+  border-left-color: #2ecc71;
+}
+
+.infoBox:nth-child(3) {
+  border-left-color: #e74c3c;
+}
+
+.infoBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.infoBox h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.infoBox p {
+  color: #666;
+  margin: 0;
+  word-break: break-word;
+}
+
+.infoBox a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoBox a:hover {
+  color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 40px 15px;
+  }
+
+  .contactContainer h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .formWrapper {
+    padding: 25px;
+  }
+
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
