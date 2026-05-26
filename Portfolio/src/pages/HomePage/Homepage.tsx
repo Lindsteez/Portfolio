@@ -1,13 +1,12 @@
 import styles from "./HomePage.module.css";
+import codingLoop from "../../assets/coding-loop.mp4";
 
 export default function HomePage() {
     return (
         <div className={styles.homePage}>
             <div className={styles.hero}>
                 <video autoPlay loop muted playsInline className={styles.heroVideo}>
-                    <source 
-                    src={`${import.meta.env.BASE_URL}coding-loop.mp4`} 
-                    type="video/mp4" />
+                    <source src={codingLoop} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
