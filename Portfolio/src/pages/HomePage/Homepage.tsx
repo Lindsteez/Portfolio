@@ -5,7 +5,9 @@ export default function HomePage() {
         <div className={styles.homePage}>
             <div className={styles.hero}>
                 <video autoPlay loop muted playsInline className={styles.heroVideo}>
-                    <source src="/coding-loop.mp4" type="video/mp4" />
+                    <source 
+                    src={`${import.meta.env.BASE_URL}coding-loop.mp4`} 
+                    type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
